@@ -34,8 +34,8 @@ cities.poitiers.url=https://data.grandpoitiers.fr/data-fair/api/v1/datasets/mobi
 server.port=8080
 ```
 
-## Run
-
+## Local Run
+Dev : `mvn clean install` 
 Dev : `mvn spring-boot:run` 
 
 ## Endpoint
@@ -48,11 +48,11 @@ http://localhost:8080/swagger-ui.html
 
 GET /api/v1/parkings
 
-Paramètres query :
-- city (required) : 
+query parameters:
+- city (required) 
 - latitude (optional) 
-- longitude (optional) : longitude de l'utilisateur
-- radiusInMeters (optional) : rayon en mètres pour limiter les résultats (défaut 5000 côté API OpenAPI)
+- longitude (optional)  
+- radiusInMeters (optional) 
 
 Example :
 
