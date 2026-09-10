@@ -1,12 +1,10 @@
 package com.instantsystem.parkingaroundme.model;
 
-import java.net.URI;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonCreator;
+
 import java.time.OffsetDateTime;
 import org.springframework.format.annotation.DateTimeFormat;
-import java.time.OffsetDateTime;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.*;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -19,7 +17,7 @@ import jakarta.annotation.Generated;
  * ApiErrorResponse
  */
 
-@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2026-09-10T16:03:30.095292+02:00[Europe/Paris]", comments = "Generator version: 7.5.0")
+@Generated(value = "org.openapitools.codegen.languages.SpringCodegen", date = "2026-09-10T16:05:00.401559400+02:00[Europe/Paris]", comments = "Generator version: 7.5.0")
 public class ApiErrorResponse {
 
   private Integer status;
