@@ -1,0 +1,149 @@
+openapi: 3.0.3
+info:
+  title: Parking AroundMe API
+  description: API REST shows the list of parking nearby and available
+  version: 1.0.0
+
+paths:
+  /api/v1/parkings:
+    get:
+      tags:
+        - Parkings
+      summary: Get the list of parking near/around a position
+      description: give the list of parkings by city and location
+      operationId: getNearbyParkings
+      parameters:
+        - name: city
+          in: query
+          description: city identifier (ex poitiers, paris, etc.)
+          required: true
+          schema:
+            type: string
+            example: poitiers
+        - name: latitude
+          in: query
+          description: Lat of the position
+          required: false
+          schema:
+            type: number
+            format: double
+            example: 46.5802
+        - name: longitude
+          in: query
+          description: Long of he position of the user
+          required: false
+          schema:
+            type: number
+            format: double
+            example: 0.3401
+        - name: radiusInMeters
+          in: query
+          description: Search radius in meters around the position
+          required: false
+          schema:
+            type: integer
+            default: 5000
+            example: 2000
+      responses:
+        '200':
+          description: List of successfully return parkings
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ParkingListResponse'
+        '400':
+          description: Invalide request parameters
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResponse'
+        '404':
+          description: Not Found (city not supported or resource not found)
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResponse'
+        '500':
+          description: Internal error
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApiErrorResponse'
+
+components:
+  schemas:
+    ParkingListResponse:
+      type: object
+      properties:
+        total:
+          type: integer
+          example: 9
+        parkings:
+          type: array
+          items:
+            $ref: '#/components/schemas/ParkingResponse'
+
+    ParkingResponse:
+      type: object
+      required:
+        - id
+        - name
+        - capacity
+        - availablePlaces
+      properties:
+        id:
+          type: string
+          description: Id of the Parking
+          example: "1"
+        name:
+          type: string
+          description: Name of the Parking
+          example: "NOTRE DAME"
+        capacity:
+          type: integer
+          description: Total Sum of places
+          example: 146
+        availablePlaces:
+          type: integer
+          description: Available Sum of places
+          example: 74
+        distanceInMeters:
+          type: integer
+          description: Distance Calculated in meters
+          example: 146
+          nullable: true
+        latitude:
+          type: number
+          format: double
+          description: GPS Latitude
+          example: 46.583498
+          nullable: true
+        longitude:
+          type: number
+          format: double
+          description: GPS Longitude
+          example: 0.345002
+          nullable: true
+        lastUpdated:
+          type: string
+          format: date-time
+          description: last update Date
+          example: "2026-09-09T19:21:02Z"
+          nullable: true
+
+    ApiErrorResponse:
+      type: object
+      properties:
+        status:
+          type: integer
+          example: 400
+        error:
+          type: string
+          example: "Bad Request"
+        message:
+          type: string
+          example: "The City 'poitier' is not supported."
+        timestamp:
+          type: string
+          format: date-time
+          example: "2026-09-10T12:00:00Z"

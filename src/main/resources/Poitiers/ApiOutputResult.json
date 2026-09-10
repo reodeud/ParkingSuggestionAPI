@@ -1,0 +1,75 @@
+{
+  "total": 7,
+  "parkings": [
+    {
+      "id": "2",
+      "name": "HOTEL DE VILLE",
+      "capacity": 625,
+      "availablePlaces": 245,
+      "distanceInMeters": 153,
+      "latitude": 46.5793235337795,
+      "longitude": 0.3385507838016221,
+      "lastUpdated": "2026-09-10T10:22:54Z"
+    },
+    {
+      "id": "3",
+      "name": "THEATRE",
+      "capacity": 320,
+      "availablePlaces": 10,
+      "distanceInMeters": 441,
+      "latitude": 46.58383455409422,
+      "longitude": 0.33779491061805567,
+      "lastUpdated": "2026-09-10T10:22:56Z"
+    },
+    {
+      "id": "1",
+      "name": "NOTRE DAME",
+      "capacity": 146,
+      "availablePlaces": 79,
+      "distanceInMeters": 524,
+      "latitude": 46.58349874703973,
+      "longitude": 0.3450022616476489,
+      "lastUpdated": "2026-09-10T10:22:55Z"
+    },
+    {
+      "id": "9",
+      "name": "GARE TOUMAI",
+      "capacity": 640,
+      "availablePlaces": 9,
+      "distanceInMeters": 551,
+      "latitude": 46.58358353103216,
+      "longitude": 0.3348348830917244,
+      "lastUpdated": "2026-09-10T10:22:55Z"
+    },
+    {
+      "id": "11",
+      "name": "ARRET MINUTE",
+      "capacity": 137,
+      "availablePlaces": 41,
+      "distanceInMeters": 559,
+      "latitude": 46.583793004495156,
+      "longitude": 0.3349825350533068,
+      "lastUpdated": "2026-09-10T10:22:55Z"
+    },
+    {
+      "id": "0",
+      "name": "BLOSSAC TISON",
+      "capacity": 665,
+      "availablePlaces": 312,
+      "distanceInMeters": 616,
+      "latitude": 46.57505317559496,
+      "longitude": 0.337126307915689,
+      "lastUpdated": "2026-09-10T10:22:54Z"
+    },
+    {
+      "id": "12",
+      "name": "PALAIS DE JUSTICE",
+      "capacity": 228,
+      "availablePlaces": 0,
+      "distanceInMeters": 1069,
+      "latitude": 46.58595804860371,
+      "longitude": 0.3512954265806957,
+      "lastUpdated": "2026-09-10T10:22:55Z"
+    }
+  ]
+}
