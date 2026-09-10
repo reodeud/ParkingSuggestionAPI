@@ -26,4 +26,5 @@ Design is made before coding, so some code was generated directly from the API s
 - We give the city, lat et long, but ideally we can have an external provider to guess the city
 - We can add a Redis to enhance performances
 - Security of the API could be added using JWT / Spring security for example to secure the access to the API
+- Add more Tests to have coverage till 100%
  
