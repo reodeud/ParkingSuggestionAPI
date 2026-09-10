@@ -1,6 +1,6 @@
 package com.instantsystem.parkingaroundme.exception;
 
-import com.instantsystem.parkingaroundme.conroller.ParkingController;
+import com.instantsystem.parkingaroundme.controller.ParkingController;
 import com.instantsystem.parkingaroundme.service.IParkingservice;
 import io.swagger.v3.oas.annotations.Hidden;
 import org.junit.jupiter.api.Test;

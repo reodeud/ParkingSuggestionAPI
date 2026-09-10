@@ -1,4 +1,4 @@
-package com.instantsystem.parkingaroundme.conroller;
+package com.instantsystem.parkingaroundme.controller;
 
 import com.instantsystem.parkingaroundme.api.ParkingsApi;
 import com.instantsystem.parkingaroundme.model.ParkingListResponse;
