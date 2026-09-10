@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  parking-api:
+    build: .
+    image: parkingsuggestionapi:latest
+    ports:
+      - "8080:8080"
+    environment:
+      # profile to use (dev/test/prod)
+      - SPRING_PROFILES_ACTIVE=prod
+      # Poitiers API URL (overridable via .env or environment)
+      - cities.poitiers.url=${CITIES_POITIERS_URL:-https://data.grandpoitiers.fr/data-fair/api/v1/datasets/mobilites-stationnement-des-parkings-en-temps-reel/lines}
+    restart: unless-stopped
